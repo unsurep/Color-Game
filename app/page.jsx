@@ -90,10 +90,10 @@ const App = () => {
       <h1 data-testid="gameInstructions" className="text-sm md:text-lg">Guess the correct color from the displayed random colors below.</h1>
 
       {/* scores, tries & new game */}
-      <div className="flex flex-col gap-1 md:ml-auto text-sm md:text-base lg:text-xl md:px-[5rem]">
+      <div className="flex flex-col gap-1 md:ml-auto text-sm md:text-base  md:px-[5rem]">
         <h3 data-testid="score">Score: {score}</h3>
         <h3>Tries: {tries}/10</h3>
-        <button data-testid="newGameButton" className="submit w-full md:mt-5 flex items-center gap-2 justify-center" onClick={resetGame}>New Game <h1 className="text-xl"><RiResetLeftLine /></h1></button>
+        <button data-testid="newGameButton" className="submit w-full md:mt-2 flex items-center gap-2 justify-center" onClick={resetGame}>New Game <h1 className="text-xl"><RiResetLeftLine /></h1></button>
       </div>
 
       {/* target color */}
