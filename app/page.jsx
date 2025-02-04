@@ -91,9 +91,9 @@ const App = () => {
 
       {/* scores, tries & new game */}
       <div className="flex flex-col gap-1 md:ml-auto text-sm md:text-base  md:px-[5rem]">
-        <h3 data-testid="score">Score: {score}</h3>
+        <h3 data-testid="score" className="">Score: {score}</h3>
         <h3>Tries: {tries}/10</h3>
-        <button data-testid="newGameButton" className="submit w-full md:mt-2 flex items-center gap-2 justify-center" onClick={resetGame}>New Game <h1 className="text-xl"><RiResetLeftLine /></h1></button>
+        <button data-testid="newGameButton" className="submit w-full md:mt-1 flex items-center gap-2 justify-center" onClick={resetGame}>New Game <h1 className="text-xl"><RiResetLeftLine /></h1></button>
       </div>
 
       {/* target color */}
@@ -112,7 +112,7 @@ const App = () => {
         
       {/* select a color */}
       <div className="">
-        <div data-testid="colorOption" className="grid mt-2 grid-cols-3 md:flex gap-3 items-center">
+        <div data-testid="colorOption" className="grid mt- grid-cols-3 md:flex gap-3 items-center">
           {guessOption.map((color, index) => (
             <button
               key={index}
