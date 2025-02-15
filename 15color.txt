@@ -27,13 +27,13 @@ const App = () => {
 
   // Game function
   const generateGame = () => {
-    const randomColors = Array.from({ length: 1 }, () => generateRandomColor());
+    const randomColors = Array.from({ length: 20 }, () => generateRandomColor());
     setColors(randomColors);
 
     const target = randomColors[Math.floor(Math.random() * 1)];
     setTargetColor(target);
 
-    const options = [target, ...Array.from({ length: 5 }, () => generateRandomColor())].sort(
+    const options = [target, ...Array.from({ length: 8 }, () => generateRandomColor())].sort(
       () => Math.random() - 0.5
     );
     setGuessOption(options);
@@ -81,7 +81,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center pt-6 px-[3rem] space-y-2 md:space-y-3">
+    <div className="flex flex-col items-center justify-center pt-6 px-[1rem] space-y-2 md:space-y-3 mb-16">
       <div className="flex items-center gap-3">
         <p className="text-4xl text-red-400/80"><IoColorPaletteSharp /></p>
         <p className="font-bold text-base md:text-2xl lg:text-4xl bg-gradient-to-r from-rose-400 via-violet-600 to-blue-600 tracking-[5px] md:tracking-[10px] lg:tracking-[20px] bg-clip-text text-transparent">
@@ -100,13 +100,13 @@ const App = () => {
 
       {/* target color */}
       <div className="">
-        <div data-testid="colorBox" className=" p-3 md:p-6 bg-gray-800 rounded-lg shadow-lg">
-          <p className="pb-1 md:text-xl ">Target color</p>
+        <div data-testid="colorBox" className=" p-3 md:p-6 bg-gray-800 rounded-lg shadow-lg grid grid-cols-5 gap-5">
+          {/* <p className="pb-1 md:text-xl ">Target color</p> */}
           {colors.map((color, index) => (
             <div
               key={index}
               style={{ backgroundColor: color }}
-              className="w-20 h-16 md:h-28 md:w-28 rounded-lg"
+              className="w-12 h-12 md:h-12 md:w-12 rounded-lg"
             ></div>
           ))}
         </div>
