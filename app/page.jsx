@@ -28,13 +28,13 @@ const App = () => {
 
   // Game function
   const generateGame = () => {
-    const randomColors = Array.from({ length: 15 }, () => generateRandomColor());
+    const randomColors = Array.from({ length: 25 }, () => generateRandomColor());
     setColors(randomColors);
 
     const target = randomColors[Math.floor(Math.random() * 1)];
     setTargetColor(target);
 
-    const options = [target, ...Array.from({ length: 5 }, () => generateRandomColor())].sort(
+    const options = [target, ...Array.from({ length: 8 }, () => generateRandomColor())].sort(
       () => Math.random() - 0.5
     );
     setGuessOption(options);
