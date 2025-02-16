@@ -60,19 +60,19 @@ const App = () => {
       setMessage('✅ Correct!');
       setScore((prev) => prev + 1);
     } else {
-      setMessage('❌ Wrong! Try Again.');
+      setMessage('❌ Oops! Try Again.');
     }
 
     setTries((prevTries) => {
       const newTries = prevTries + 1;
-      if (newTries >= 10) {
+      if (newTries >= 5) {
         setGameOver(true);
         
         const finalScore = isCorrect ? score + 1 : score;
         if (finalScore === 10) {
-          setMessage('🎉 Congratulations, YOU WON!');
+          setMessage('🎉 Congratulations, YOU WON! 🍻🍺 ON ON');
         } else {
-          setMessage(`Game Over! Total score: ${finalScore}`);
+          setMessage(`OTILO🙋‍♂️🙋‍♀️ Game Over! Total score: ${finalScore}`);
         }
       } else {
         setTimeout(generateGame, 1000);
