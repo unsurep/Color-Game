@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { IoColorPaletteSharp } from "react-icons/io5";
 import { RiResetLeftLine } from "react-icons/ri";
+import Image from "next/image";
 
 
 const App = () => {
@@ -81,7 +82,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center pt-6 px-[3rem] space-y-2 md:space-y-3">
+    <div className="flex flex-col items-center justify-center pt-6 px-[3rem] space-y-2 md:space-y-3 pb-10">
       <div className="flex items-center gap-3">
         <p className="text-4xl text-red-400/80"><IoColorPaletteSharp /></p>
         <p className="font-bold text-base md:text-2xl lg:text-4xl bg-gradient-to-r from-rose-400 via-violet-600 to-blue-600 tracking-[5px] md:tracking-[10px] lg:tracking-[20px] bg-clip-text text-transparent">
@@ -129,6 +130,13 @@ const App = () => {
       </div>
 
       {message && <p data-testid="gameStatus" className="md:text-lg font-bold blink-1 text-sm">{message}</p>}
+
+
+      {/* Footer */}
+      <div className="flex items-center justify-center gap-3 pt-16">
+        <h4><Image src='/me.jpg' height={27} width={27} alt="image" className="rounded-full ring ring-green-500"/></h4>
+        <p className="text-xs md:text-base">created by 1sureplayer</p>
+      </div>
     </div>
   );
 };
