@@ -65,7 +65,7 @@ const App = () => {
 
     setTries((prevTries) => {
       const newTries = prevTries + 1;
-      if (newTries >= 5) {
+      if (newTries >= 8) {
         setGameOver(true);
         
         const finalScore = isCorrect ? score + 1 : score;
