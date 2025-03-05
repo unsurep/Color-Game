@@ -34,7 +34,7 @@ const App = () => {
     const target = randomColors[Math.floor(Math.random() * 1)];
     setTargetColor(target);
 
-    const options = [target, ...Array.from({ length: 4 }, () => generateRandomColor())].sort(
+    const options = [target, ...Array.from({ length: 5 }, () => generateRandomColor())].sort(
       () => Math.random() - 0.5
     );
     setGuessOption(options);
