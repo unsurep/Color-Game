@@ -90,7 +90,7 @@ const App = () => {
         </p>
       </div>
 
-      <h1 data-testid="gameInstructions" className="text-sm md:text-lg">Guess the correct color from the displayed random colors below.</h1>
+      <h1 data-testid="gameInstructions" className="text-sm md:text-lg">Guess the correct color from the displayed random colors below...</h1>
 
       {/* scores, tries & new game */}
       <div className=" md:ml-auto text-sm md:text-base flex flex-col gap-1  md:px-[5rem]">
